@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0; /* isso aqui e pra zerar CSS que vem padrao */
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth; /*efeito fluido */
+  font-family: "Poppins", "Times New Roman", Times, Serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  line-height: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 0.05rem;
+}
+.container {
+  min-height: 100vh; /* preencher a tela inteira*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+/* Seção de apresentação */
+
+.links {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+  transition: 0.5s ease;
+}
+.links a {
+  color: white;
+  padding: 3px;
+}
+.links a:hover {
+  background-color: white;
+  color: gray;
+  transition: 0.8s;
+}
+
+#menu {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  color: orange;
+}
+#menu li {
+  display: inline;
+}
+#menu li a {
+  padding: 20px;
+  color: orange;
+}
+#menu li a:hover {
+  background-color: orange;
+  color: white;
+  transition: 0.5s ease;
+  transition-property: background-color, color;
+}
+#presentation {
+  background-image: url(./imagens\ para\ site.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1; /* joga por cima da tela preta */
+}
+#presentation h1 {
+  display: block;
+  width: fit-content;
+  font-size: 5rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+#presentation h1:nth-child(1) {
+  animation-delay: 0.8s;
+}
+#presentation h1:nth-child(2) {
+  animation-delay: 1.4;
+}
+#presentation h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 2.8s;
+}
+#presentation .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: orange;
+  background-color: transparent;
+  border: 2px solid orange;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 20px;
+  transition: 0.5s ease;
+  transition-property: background-color, color;
+}
+#presentation .cta:hover {
+  color: white;
+  font-weight: 500;
+  background-color: orange;
+}
+#presentation h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+  background-color: orange;
+}
+#presentation h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#presentation h1:nth-child(2) span {
+  animation-delay: 1.4s;
+}
+#presentation h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+#presentation::after {
+  /* Coloca uma coisa em cima */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Sessão de Projetos*/
+
+#project .project {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 0;
+}
+#project .project-header h1 {
+  margin-bottom: 50px;
+}
+#project .project-itens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#project .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#project .project-info {
+  padding: 30px;
+  flex-basis: 50%; /* quanto ele aceita ser flexivel */
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    60deg,
+    rgb(98, 72, 247) 0%,
+    rgb(13, 3, 99) 100%
+  );
+  color: white;
+}
+#project .project-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#project .project-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#project .project-img {
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#project .project-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#project .project-itens:hover .project-img img {
+  transform: scale(1.1);
+}
+#project .project-img img {
+  transition: 0.5s ease transform;
+}
+
+#link-topo {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 3px 3px 10px #333;
+}
+/* Sessão footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    60deg,
+    rgb(98, 72, 247) 0%,
+    rgb(13, 3, 99) 100%
+  );
+  padding: 20px;
+}
+
+footer .produtor {
+  display: flex;
+  color: rgb(193, 224, 241);
+  font-size: medium;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Sessão de Keyframes*/
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: orange;
+    font-weight: 500px;
+  }
+}
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+/* Sessão de media Query*/
+
+@media screen and (max-width: 600px) {
+  #menu li {
+    display: block;
+    padding: 10px;
+    margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #project .project-itens {
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  #project .all-projects .project-info {
+    height: 100%;
+  }
+  #project .all-projects .project-img {
+    height: 100%;
+  }
+  #project .project-itens:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
