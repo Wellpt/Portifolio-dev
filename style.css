@@ -66,6 +66,9 @@ p {
 }
 
 #menu {
+  position: absolute;
+  width: 100%;
+  right: 0px;
   text-decoration: none;
   color: white;
   font-size: 2rem;
@@ -294,9 +297,35 @@ footer .produtor {
     left: 100%;
   }
 }
+
+
 /* Sessão de media Query*/
 
 @media screen and (max-width: 600px) {
+
+  #menu li a {
+    color: orange;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  #mobile-menu {
+    padding:10px 0px 0px 10px;
+  }
+
+  #nav.clicou #menu {
+    display: none;
+  }
+
+  #mobile-menu > div {
+    
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
   #menu li {
     display: block;
     padding: 10px;
