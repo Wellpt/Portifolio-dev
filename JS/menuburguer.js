@@ -1,8 +1,8 @@
-const btnmobile = document.getElementById('mobile-menu');
+const btnmobile = document.querySelector('#mobile-menu');
 
 function menuBurger(event) {
     if (event.type === 'touchstart') event.preventDefault();
-    const nav = document.getElementById('nav');
+    const nav = document.querySelector('#nav');
     nav.classList.toggle('clicou');
 
 }
