@@ -1,0 +1,1 @@
+export const profile = { name: 'Wellington Nobre', role: 'Software Engineer | Back-end & Full Stack Developer | Tech Leadership', github: 'https://github.com/Wellpt', linkedin: 'https://www.linkedin.com/in/wellington-nobre-9029b9167', email: 'wellington_techteam@outlook.com.br', resumeUrl: '' };
